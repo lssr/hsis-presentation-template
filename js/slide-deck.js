@@ -319,9 +319,9 @@ SlideDeck.prototype.loadConfig_ = function(config) {
 
   if (settings.title) {
     document.title = settings.title.replace(/<br\/?>/, ' ');
-    if (settings.eventInfo && settings.eventInfo.title) {
-      document.title +=  ' - ' + settings.eventInfo.title;
-    }
+    // if (settings.eventInfo && settings.eventInfo.title) {
+    //   document.title +=  ' - ' + settings.eventInfo.title;
+    // }
     document.querySelector('[data-config-title]').innerHTML = settings.title;
   }
 
@@ -329,11 +329,16 @@ SlideDeck.prototype.loadConfig_ = function(config) {
     document.querySelector('[data-config-subtitle]').innerHTML = settings.subtitle;
   }
 
+  if (settings.eventInfo.title || settings.eventInfo.date) {
+    document.querySelector('[data-config-event]').innerHTML = settings.eventInfo.title + ' - ' + settings.eventInfo.date;
+  }
+
   if (this.config_.presenters) {
     var presenters = this.config_.presenters;
     var dataConfigContact = document.querySelector('[data-config-contact]');
 
     var html = [];
+    var titleHtml = [];
     if (presenters.length == 1) {
       var p = presenters[0];
 
@@ -363,9 +368,11 @@ SlideDeck.prototype.loadConfig_ = function(config) {
       }
     } else {
       for (var i = 0, p; p = presenters[i]; ++i) {
-        html.push(p.name + ' - ' + p.company);
+        html.push(p.name + ' - ' + p.email);
+        titleHtml.push(p.name + ' - ' + p.company);
       }
       html = html.join('<br>');
+      titleHtml = titleHtml.join('<br>');
       if (dataConfigContact) {
         dataConfigContact.innerHTML = html;
       }
@@ -373,12 +380,12 @@ SlideDeck.prototype.loadConfig_ = function(config) {
 
     var dataConfigPresenter = document.querySelector('[data-config-presenter]');
     if (dataConfigPresenter) {
-      dataConfigPresenter.innerHTML = html;
-      if (settings.eventInfo) {
-        var date = settings.eventInfo.date;
-        var dateInfo = date ? ' - <time>' + date + '</time>' : '';
-        dataConfigPresenter.innerHTML += settings.eventInfo.title + dateInfo;
-      }
+      dataConfigPresenter.innerHTML = titleHtml;
+      // if (settings.eventInfo) {
+      //   var date = settings.eventInfo.date;
+      //   var dateInfo = date ? ' - <time>' + date + '</time>' : '';
+      //   dataConfigPresenter.innerHTML += settings.eventInfo.title + dateInfo;
+      // }
     }
   }
 

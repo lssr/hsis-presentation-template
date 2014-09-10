@@ -4,7 +4,7 @@ var SLIDE_CONFIG = {
     title: 'Title Goes Here<br>Up To Two Lines',
     subtitle: 'Subtitle Goes Here',
     eventInfo: {
-     title: 'Google I/O',
+     title: 'Event Title',
      date: '6/23/2013'
     },
     useBuilds: true, // Default: true. False will turn off slide animation builds.
@@ -22,17 +22,13 @@ var SLIDE_CONFIG = {
 
   // Author information
   presenters: [{
-    name: 'First Last',
-    company: 'Job Title<br>Company<br>',
-    email: 'email@email.com',
-    twitter: '@handle'
+    name: '<b>First Last</b>',
+    company: 'Job Title ',
+    email: 'email@email.com'
   }, {
-    name: 'Third Name',
-    company: 'Job Title<br>Google<br><br>',
-    gplus: 'http://plus.google.com/dd',
-    twitter: '@yourhandle',
-    www: 'http://www.you.com',
-    github: 'http://github.com/you'
+    name: '<b>Third Name</b>',
+    company: 'Job Title<br>Company',
+    email: 'email@email.com'
   }]
 };
 
