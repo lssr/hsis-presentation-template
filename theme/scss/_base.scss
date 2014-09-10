@@ -99,8 +99,8 @@ slides > slide {
   display: block;
   position: absolute;
   overflow: hidden;
-  left: 50%;
-  top: 50%;
+  // left: 50%; Disabled to allow fullscreen
+  // top: 50%; Disabled to allow fullscreen
   @include box-sizing(border-box);
 }
 

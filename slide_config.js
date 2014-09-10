@@ -22,17 +22,17 @@ var SLIDE_CONFIG = {
 
   // Author information
   presenters: [{
-    name: 'Luis Santos',
-    company: 'PhD Student<br>University of Maryland',
-    email: 'santosl@umd.edu',
-    twitter: '@_lssr'
-  }/*, {
-    name: 'Second Name',
-    company: 'Job Title, Google',
-    gplus: 'http://plus.google.com/1234567890',
+    name: 'First Last',
+    company: 'Job Title<br>Company<br>',
+    email: 'email@email.com',
+    twitter: '@handle'
+  }, {
+    name: 'Third Name',
+    company: 'Job Title<br>Google<br><br>',
+    gplus: 'http://plus.google.com/dd',
     twitter: '@yourhandle',
     www: 'http://www.you.com',
     github: 'http://github.com/you'
-  }*/]
+  }]
 };
 

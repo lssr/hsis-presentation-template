@@ -68,8 +68,8 @@ slides > slide {
   //background-color: white;
   width: $slide-width;
   height: $slide-height;
-  margin-left: -$slide-width / 2;
-  margin-top: -$slide-height / 2;
+  // margin-left: -$slide-width / 2; Disabled to allow fullscreen
+  // margin-top: -$slide-height / 2; Disabled to allow fullscreen
   padding: $slide-top-bottom-padding $slide-left-right-padding;
 
   @include border-radius($slide-border-radius);
@@ -138,7 +138,7 @@ slides > slide {
       position: absolute;
       bottom: $slide-top-bottom-padding / 2;
       left: $slide-left-right-padding;
-      background: url(../../images/google_developers_icon_128.png) no-repeat 0 50%;
+      background: url(../../images/umd_circle_logo_128.png) no-repeat 0 100%;
       @include background-size($brand-small-icon-size $brand-small-icon-size);
       padding-left: $brand-small-icon-size + 10;
       height: $brand-small-icon-size;
@@ -210,8 +210,8 @@ slides.layout-faux-widescreen {
   $translateX: 1130px;
 
   > slide {
-    margin-left: -$slide-width-widescreen / 2;
-    width: $slide-width-widescreen;
+    // margin-left: -$slide-width-widescreen / 2; Disabled to allow fullscreen
+    // width: $slide-width-widescreen; Disabled to allow fullscreen
   }
 
   > slide.far-past {
@@ -373,7 +373,8 @@ code {
 
 iframe {
   width: 100%;
-  height: $slide-height - ($slide-top-bottom-padding * 2) - ($article-content-top-padding * 2);
+  height: 80%;
+  // height: $slide-height - ($slide-top-bottom-padding * 2) - ($article-content-top-padding * 2);
   background: white;
   border: 1px solid $gray-1;
   @include box-sizing(border-box);
@@ -487,12 +488,12 @@ table {
 
   th {
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     @include background(linear-gradient(top, $brand-blue 40%, $brand-blue-secondary2 80%) no-repeat);
   }
 
   td, th {
-    font-size: 18px;
+    font-size: 20px;
     padding: 1em 0.5em;
   }
 
@@ -801,7 +802,8 @@ article.smaller {
 /* ===== SLIDE CONTENT ===== */
 .logoslide {
   img {
-    width: 383px;
+    // width: 383px;
+    width: auto;
     height: 92px;
   }
 }
@@ -875,11 +877,11 @@ aside.gdbar {
   }
 
   img {
-    width: 85px;
-    height: 85px;
+    width: 67px;
+    height: 67px;
     position: absolute;
     right: 0;
-    margin: 8px 15px;
+    margin: 15px 15px;
   }
 }
 
