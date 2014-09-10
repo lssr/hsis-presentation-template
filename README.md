@@ -1,3 +1,8 @@
+hsis-presentation-template
+==========================
+
+Presentation template for HSIS lab at the University of Maryland based on Google IO
+
 <style>
 @import "http://fonts.googleapis.com/css?family=Open Sans:regular,semibold,italic,italicsemibold|Inconsolata&amp;v2";
 body {
@@ -128,3 +133,4 @@ Presenter mode is sticky, so refreshing the page will persist your settings.
 ---
 
 That's all she wrote!
+
